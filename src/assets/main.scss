@@ -1,0 +1,93 @@
+html,body {
+    padding: 0;
+    margin: 0px;
+    height: 100%;
+}
+.box-card .el-card__body {
+    padding: 10px;
+}
+.box-card .el-card__header {
+    padding: 10px;
+}
+.box-card .el-form-item {
+    margin-bottom: 15px;
+}
+#app {
+    width:100%;
+    height:100%;
+    box-sizing: border-box;
+    padding: 5px;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+    background: #ccc;
+
+    .main-box {
+        display:grid;
+        grid-gap: 5px;
+        grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        > div {
+            background: #fff;
+            border-radius: 5px;
+            &.chart-box {
+                grid-column: 1/span 6;
+                grid-row: 1/4;
+                overflow: hidden;
+                .chart {
+                    height: 100%;
+
+                }
+            }
+            &.center-bar {
+                background: none;
+                grid-column: 7/8;
+                grid-row: 1/4;
+                display: flex;
+                box-sizing: border-box;
+                .box-card{
+                    flex:1;
+                }
+            }
+            &.center-floor {
+                background: none;
+                grid-column: 7/8;
+                grid-row: 4/6;
+                display: flex;
+                box-sizing: border-box;
+                .box-card{
+                    flex: 1;
+                }
+            }
+            &.floor-box {
+                grid-column: 1 /span 6;
+                grid-row: 4/5;
+                display: flex;
+                padding-right: 10px;
+                box-sizing: border-box;
+                justify-content: flex-start;
+                .year-item {
+                    flex: 1;
+                    height: 90%;
+                    display: flex;
+                    justify-content: center;
+                    .chart {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+.fund-select{
+    box-sizing: border-box;
+    padding: 10px;
+    border:1px dotted cornflowerblue;
+    border-radius: 5px;
+    background: rgb(153, 224, 252);
+    margin-bottom: 20px;
+}
